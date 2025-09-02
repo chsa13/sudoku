@@ -214,7 +214,7 @@ function solve() {
   }
   else {
     generateFace()
-    alert("Ошибка")
+    alert("Ошибка!!")
     setValues(values)
   }
 }
@@ -389,7 +389,7 @@ function solveSudoku(vals) {
           let variantsCopy = JSON.parse(JSON.stringify(variants))
           variantsCopy[cell] = [variants[cell][variant]]
           countRecursion++
-          if (countRecursion > 500) {
+          if (countRecursion > 50000) {
             breakFlag = true
             resultVariant = 0
           }

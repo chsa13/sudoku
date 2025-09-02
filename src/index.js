@@ -389,7 +389,7 @@ function solveSudoku(vals) {
           let variantsCopy = JSON.parse(JSON.stringify(variants))
           variantsCopy[cell] = [variants[cell][variant]]
           countRecursion++
-          if (countRecursion > 500) {
+          if (countRecursion > 5000) {
             breakFlag = true
             resultVariant = 0
           }
